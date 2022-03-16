@@ -1,6 +1,6 @@
 {
   "name": "iyzipayjs",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "alternative library for iyzipay written in typescript",
   "main": "./lib/src/iyzipay.js",
   "types": "./lib/src/iyzipay.d.ts",
