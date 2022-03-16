@@ -1,9 +1,10 @@
 {
   "name": "iyzipayjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "alternative library for iyzipay written in typescript",
-  "main": "./lib/iyzipay.ts",
-  "files": ["lib/**/*"],
+  "main": "./lib/src/iyzipay.js",
+  "types": "./lib/src/iyzipay.d.ts",
+  "files": ["lib/src/**/*", "src/**/*"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AppacYazilim/iyzipayjs.git"
@@ -28,11 +29,12 @@
     "typescript": "^4.6.2"
   },
   "scripts": {
-    "prepublish": "npm run build",
-    "prebuild": "rm -rf ./dist",
+    "prepare" : "npm run build",
+    "prebuild": "rm -rf ./lib",
+    "prepublishOnly" : "npm test && npm run lint",
     "build": "tsc",
     "lint": "eslint .",
-    "pretest": "npm run lint && rm -rf ./dist",
+    "pretest": "npm run lint && rm -rf ./lib",
     "test": "jest "
   },
   "engines": {
