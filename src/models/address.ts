@@ -1,6 +1,6 @@
 export interface Address {
   address: string,
-  zipCode: string,
+  zipCode?: string,
   contactName: string,
   city: string,
   country: string

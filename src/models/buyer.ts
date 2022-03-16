@@ -4,13 +4,13 @@ export default interface Buyer {
   surname: string,
   identityNumber: string,
   email: string,
-  gsmNumber: string,
-  registrationDate: string,
-  lastLoginDate: string,
+  gsmNumber?: string,
+  registrationDate?: string,
+  lastLoginDate?: string,
   registrationAddress: string,
   city: string,
   country: string,
-  zipCode: string,
+  zipCode?: string,
   ip: string
 }
 
