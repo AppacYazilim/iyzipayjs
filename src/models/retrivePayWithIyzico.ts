@@ -12,10 +12,10 @@ export default interface RetrivePayWithIyzico extends CommonRequest {
 
 export function RetrivePayWithIyzicoValidator(data: RetrivePayWithIyzico) {
   return {
-    locale: data['locale'],
-    conversationId: data['conversationId'],
-    token: data['token'],
-  }
+    locale: data["locale"],
+    conversationId: data["conversationId"],
+    token: data["token"],
+  };
 }
 
 

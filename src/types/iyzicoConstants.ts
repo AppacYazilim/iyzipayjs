@@ -1,0 +1,11 @@
+export type Locale = "tr" | "en";
+export type Currency = "TRY" | "EUR" | "USD" | "IRR" | "GBP" | "NOK" | "RUB" | "CHF";
+export type PaymentChannel = "MOBILE" | "WEB" | "MOBILE_WEB" | "MOBILE_IOS" | "MOBILE_ANDROID" | "MOBILE_WINDOWS" | "MOBILE_TABLET" | "MOBILE_PHONE";
+export type ItemType = "PHYSICAL" | "VIRTUAL";
+export type PaymentGroup = "PRODUCT" | "LISTING" | "SUBSCRIPTION";
+export type SUB_MERCHANT_TYPE = "PERSONAL" | "PRIVATE_COMPANY" | "LIMITED_OR_JOINT_STOCK_COMPANY";
+export type APM_TYPE = "SOFORT" | "IDEAL" | "QIWI" | "GIROPAY";
+export type REFUND_REASON = "double_payment" | "buyer_request" | "fraud" | "other";
+export type SUBSCRIPTION_PRICING_PLAN_INTERVAL = "DAILY" | "WEEKLY" | "MONTHLY" | "YEARLY";
+export type SUBSCRIPTION_STATUS = "EXPIRED" | "UNPAID" | "CANCELED" | "ACTIVE" | "PENDING" | "UPGRADED";
+export type SUBSCRIPTION_INITIAL_STATUS = "ACTIVE" | "PENDING";

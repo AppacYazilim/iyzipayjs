@@ -29,5 +29,5 @@ export default interface PaymentModel {
   hostReference: string;
   token: string;
   callbackUrl: string;
-  paymentStatus: 'SUCCESS' | 'FAILURE';
+  paymentStatus: "SUCCESS" | "FAILURE";
 }

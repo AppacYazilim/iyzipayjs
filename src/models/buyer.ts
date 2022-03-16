@@ -30,5 +30,5 @@ export function BuyerValidator(data: Buyer) {
     country: data["country"],
     zipCode: data["zipCode"],
     ip: data["ip"]
-  }
+  };
 }

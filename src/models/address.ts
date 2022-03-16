@@ -14,5 +14,5 @@ export function AddressValidator(data: Address) {
     contactName: data["contactName"],
     city: data["city"],
     country: data["country"]
-  }
+  };
 }

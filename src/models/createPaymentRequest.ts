@@ -19,7 +19,7 @@ export default interface CreatePaymentRequest extends CommonRequest {
   shippingAddress?: Address,
   billingAddress: Address,
   basketItems: BasketItem[],
-  paymentSource?: 'SHOPIFY' | 'MAGENTO' | 'PRESTASHOP' | 'WOOCOMMERCE' | 'OPENCART',
+  paymentSource?: "SHOPIFY" | "MAGENTO" | "PRESTASHOP" | "WOOCOMMERCE" | "OPENCART",
   currency: Currency,
   gsmNumber?: string,
   posOrderId?: string,
@@ -30,26 +30,26 @@ export default interface CreatePaymentRequest extends CommonRequest {
 
 export function CreatePaymentRequestValidator(data: CreatePaymentRequest) {
   return {
-    locale: data['locale'],
-    conversationId: data['conversationId'],
-    price: formatPrice(data['price']),
-    paidPrice: formatPrice(data['paidPrice']),
-    installment: data['installment'],
-    paymentChannel: data['paymentChannel'],
-    basketId: data['basketId'],
-    paymentGroup: data['paymentGroup'],
-    paymentCard: PaymentCardValidator(data['paymentCard']),
-    buyer: BuyerValidator(data['buyer']),
-    shippingAddress: data['shippingAddress'] ? AddressValidator(data['shippingAddress']) : undefined,
-    billingAddress: AddressValidator(data['billingAddress']),
-    basketItems: data['basketItems'].map(function (basketItem) {
+    locale: data["locale"],
+    conversationId: data["conversationId"],
+    price: formatPrice(data["price"]),
+    paidPrice: formatPrice(data["paidPrice"]),
+    installment: data["installment"],
+    paymentChannel: data["paymentChannel"],
+    basketId: data["basketId"],
+    paymentGroup: data["paymentGroup"],
+    paymentCard: PaymentCardValidator(data["paymentCard"]),
+    buyer: BuyerValidator(data["buyer"]),
+    shippingAddress: data["shippingAddress"] ? AddressValidator(data["shippingAddress"]) : undefined,
+    billingAddress: AddressValidator(data["billingAddress"]),
+    basketItems: data["basketItems"].map(function (basketItem) {
       return BasketItemValidator(basketItem);
     }),
-    paymentSource: data['paymentSource'],
+    paymentSource: data["paymentSource"],
     currency: data["currency"],
-    gsmNumber: data['gsmNumber'],
-    posOrderId: data['posOrderId'],
-    connectorName: data['connectorName'],
-    callbackUrl: data['callbackUrl']
-  }
+    gsmNumber: data["gsmNumber"],
+    posOrderId: data["posOrderId"],
+    connectorName: data["connectorName"],
+    callbackUrl: data["callbackUrl"]
+  };
 }

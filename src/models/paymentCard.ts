@@ -29,5 +29,5 @@ export function PaymentCardValidator(data: PaymentCard) {
     consumerToken: data["consumerToken"],
     registerConsumerCard: data["registerConsumerCard"],
     ucsToken: data["ucsToken"]
-  }
+  };
 }

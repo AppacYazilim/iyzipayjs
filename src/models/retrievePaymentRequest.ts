@@ -10,9 +10,9 @@ export default interface RetrievePaymentRequest extends CommonRequest {
 
 export function RetrievePaymentRequestValidator(data: RetrievePaymentRequest) {
   return {
-    locale: data['locale'],
-    conversationId: data['conversationId'],
-    paymentId: data['paymentId'],
-    paymentConversationId: data['paymentConversationId']
+    locale: data["locale"],
+    conversationId: data["conversationId"],
+    paymentId: data["paymentId"],
+    paymentConversationId: data["paymentConversationId"]
   };
 }

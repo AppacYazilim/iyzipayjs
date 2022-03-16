@@ -23,5 +23,5 @@ export function BasketItemValidator(data: BasketItem) {
     itemType: data["itemType"],
     subMerchantKey: data["subMerchantKey"] ?? undefined,
     subMerchantPrice: data["subMerchantPrice"] ? formatPrice(data["subMerchantPrice"]) : undefined
-  }
+  };
 }
