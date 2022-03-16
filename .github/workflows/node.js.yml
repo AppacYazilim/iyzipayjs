@@ -3,6 +3,8 @@
 
 name: Node.js CI
 
+
+
 on:
   push:
     branches: [ main ]
@@ -26,3 +28,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm test
+      env:
+        IYZIPAY_URI: ${secrets.IYZIPAY_URI}    
+        IYZIPAY_SECRET_KEY: ${secrets.IYZIPAY_SECRET_KEY}    
+        IYZIPAY_API_KEY: ${secrets.IYZIPAY_API_KEY}    
