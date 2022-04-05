@@ -1,7 +1,6 @@
 name: Eslint
 
 on:
-  push:
   pull_request:
 
 jobs:
@@ -12,8 +11,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-          cache: 'yarn'
+          cache: 'npm'
       - name: Install yarn
-        run: yarn install  --pure-lockfile
+        run: npm i eslint
       - name: Check Linting
-        run: yarn lint
+        run: npm run lint
