@@ -1,0 +1,19 @@
+name: Eslint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - name: Install yarn
+        run: yarn install  --pure-lockfile
+      - name: Check Linting
+        run: yarn lint
